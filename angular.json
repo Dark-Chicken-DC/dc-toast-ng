@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "projects/dc-toast-ng-project",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,7 +25,7 @@
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "./projects/dc-toast-ng/assets",
+                "input": "./dist/dc-toast-ng/assets",
                 "output": "/assets/"
               }
             ],
