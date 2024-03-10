@@ -1,6 +1,6 @@
 {
   "name": "dc-toast-ng",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0"
@@ -8,5 +8,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {"url": "https://github.com/Dark-Chicken-DC/dc-toast-ng"},
+  "homepage": "https://dark-chicken-dc.github.io/dc-toast-ng/",
+  "keywords": ["angular", "typescript", "alert", "toast", "angular toast", "notifications", "dc", "darkchicken", "dc-toast-ng", "message"]
 }
