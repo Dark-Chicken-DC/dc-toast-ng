@@ -1,0 +1,262 @@
+
+* {
+    font-family: 'IBMPlexSans', sans-serif;
+
+    --dc-success: #4caf50;
+    --dc-success-hover: #388e3c;
+    --dc-error: #E53935;
+    --dc-error-hover: #c62828;
+    --dc-warn: #ff9800;
+    --dc-warn-hover: #f57c00;
+    --dc-info: #00bcd4;
+    --dc-info-hover: #00838f;
+    --dc-dark: #333333;
+    --dc-light: #f5f5f5;
+}
+
+
+.toast-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.toast {
+    padding-left: 3.5rem;
+    padding-right: 1rem;
+    margin: 0.5rem;
+    border-radius: 0.6rem;
+    width: 16rem;
+    
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: slideInFromTop 0.5s ease forwards;
+    animation-fill-mode: forwards;
+    color: var(--dc-light);
+
+    border: 1px solid transparent;
+}
+
+.toast:hover{
+    cursor: pointer;
+}
+
+.toast-content{
+    max-width: 16rem;
+    overflow: hidden;
+    margin-right: 0.5rem;
+}
+
+/*#region Positions*/
+.top-center {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.right-center {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-center {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.left-center {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*#endregion*/
+
+/*#region Types*/
+
+.success {
+    background-color: var(--dc-success);
+    box-shadow: 0px 0px 20px var(--dc-success);
+}
+
+.error {
+    background-color: var(--dc-error);
+    box-shadow: 0px 0px 20px var(--dc-error);
+}
+
+.warn {
+    background-color: var(--dc-warn);
+    box-shadow: 0px 0px 20px var(--dc-warn);
+}
+
+.info {
+    background-color: var(--dc-info);
+    box-shadow: 0px 0px 20px var(--dc-info);
+}
+
+/*#region Hover*/
+
+.success:hover {
+    border: 1px solid var(--dc-success-hover);
+    box-shadow: 0px 0px 20px var(--dc-success-hover);
+    
+}
+
+.error:hover {
+    border: 1px solid var(--dc-error-hover);
+    box-shadow: 0px 0px 20px var(--dc-error-hover);
+}
+
+.warn:hover {
+    border: 1px solid var(--dc-warn-hover);
+    box-shadow: 0px 0px 20px var(--dc-warn-hover);
+}
+
+.info:hover {
+    border: 1px solid var(--dc-info-hover);
+    box-shadow: 0px 0px 20px var(--dc-info-hover);
+}
+
+/*#endregion*/
+
+/*#endregion*/
+
+
+/*#region CloseButton*/
+
+.close-button {
+    width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    fill: var(--dc-light);
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.close-button:hover {
+    fill: var(--dc-dark);
+}
+
+.close-button.right {
+    right: 0;
+    margin-right: 0.5rem;
+}
+
+.close-button.left {
+    left: 0;
+    margin-left: 0.5rem;
+}
+
+/*#endregion*/
+
+
+/*#region Keyframes*/
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-8%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*#endregion*/
+
+
+/*#region Progres Bar*/
+
+.progress-bar::before {
+    position: absolute;
+    border-bottom-left-radius: 0.6rem;
+    content: "";
+    height: 3px;
+    width: 100%;
+    bottom: 0px;
+    left: 3px;
+    animation: progress var(--animation-duration, 5s) linear forwards;
+}
+
+@keyframes progress {
+    100% {
+        width: 0%;
+    }
+}
+
+.success .progress-bar::before {
+    background-color: var(--dc-success-hover);
+}
+
+.warn .progress-bar::before {
+    background-color: var(--dc-warn-hover);
+}
+
+.error .progress-bar::before {
+    background-color: var(--dc-error-hover);
+}
+
+.info .progress-bar::before {
+    background-color: var(--dc-info-hover);
+}
+
+/*#endregion*/
+
+
+/*#region Icon*/
+
+.toast-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 0;
+    margin-left: 1.5rem;
+    fill: white;
+}
+
+
+/*#endregion*/

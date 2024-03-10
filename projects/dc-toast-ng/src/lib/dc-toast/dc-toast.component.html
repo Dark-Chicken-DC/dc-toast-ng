@@ -1,0 +1,14 @@
+<span @fadeIn @fadeOut class="toast-container" [ngClass]="position" *ngFor="let position of getToastPositions()">
+    <span @fadeIn @fadeOut (mouseenter)="onMouseEnter(position,toast)" (mouseleave)="onMouseLeave(position,toast)"
+        [ngClass]="toast.type" class="toast" *ngFor="let toast of toasts[position]">
+        <div class="toast-icon" [ngClass]="toast.type + '-icon'" [innerHTML]="toast.icon"></div>
+        <span class="toast-content">{{toast.content}}</span>
+        <span [style.--animation-duration]="toast.time" *ngIf="toast.allowTimeBar" class="progress-bar"></span>
+        <div [innerHTML]="closeButtonSvg" (click)="removeToast(position,toast)" [ngClass]="toast.closeButtonPosition"
+            class="close-button" *ngIf="toast.closeButton">
+        </div>
+    </span>
+</span>
+
+
+
