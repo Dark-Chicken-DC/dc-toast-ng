@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Dark-Chicken-DC/dc-toast-ng/main/misc/documentation-assets/dark-chicken-toasts-examples.png" width="600" height="300" alt="Dark Chicken Toast NG">
+  <img src="https://raw.githubusercontent.com/Dark-Chicken-DC/dc-toast-ng/main/misc/documentation-assets/dark-chicken-toasts-examples.png" width="600" alt="Dark Chicken Toast NG">
   <br>
   <h1>Dark Chicken Toast NG</h1>
   <br>
