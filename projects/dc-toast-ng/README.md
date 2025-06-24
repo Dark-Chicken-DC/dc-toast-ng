@@ -153,3 +153,32 @@ MIT
 
 > GitHub [@skarahan35](https://github.com/skarahan35) &nbsp;&middot;&nbsp;
 > Github [@ergulferik](https://github.com/ergulferik) &nbsp;&middot;&nbsp;
+
+## Standalone Kullanım
+
+Artık `dc-toast-ng` tamamen standalone bir Angular bileşenidir. Modül import etmeye gerek yoktur.
+
+### Kurulum
+
+```typescript
+import { DcToastComponent } from 'dc-toast-ng';
+```
+
+veya bir feature/component dosyanızda:
+
+```typescript
+@Component({
+  // ...
+  imports: [DcToastComponent],
+  standalone: true,
+  // ...
+})
+```
+
+### Kullanım
+
+```html
+<dc-toast-ng></dc-toast-ng>
+```
+
+> Not: Servisleri kullanmak için herhangi bir değişiklik yapmanıza gerek yoktur. `DcToastService` ve `IconService` otomatik olarak root'a enjekte edilir.

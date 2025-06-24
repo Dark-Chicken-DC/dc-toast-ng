@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, Output, NgZone } from '@angular/core';
-import { ToastPositionType, ToastCloseButtonPositionType, ToastType } from '../../type/types';
+import { Component, EventEmitter, NgZone } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastPositionType } from '../../type/types';
 import { DcToastService } from '../../services/dc-toast.service';
 import { IconService } from '../../services/icon.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -13,7 +15,9 @@ import { Observable } from 'rxjs';
     selector: 'dc-toast-ng',
     templateUrl: 'dc-toast.component.html',
     styleUrls: ['./dc-toast.component.css'],
-    animations: [fadeIn, fadeOut]
+    animations: [fadeIn, fadeOut],
+    standalone: true,
+    imports: [CommonModule, HttpClientModule]
 })
 export class DcToastComponent {
 
